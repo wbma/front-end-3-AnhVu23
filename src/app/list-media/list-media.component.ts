@@ -28,7 +28,7 @@ export class ListMediaComponent implements OnInit {
       console.log(this.mediaArray);
     }));
 
-    this.digiTransitService.getRoute('kilon asema').subscribe(
+    this.digiTransitService.getRoute('kamppi').subscribe(
       (response) => {
         console.log(response['data'].stops);
         this.stopArray = response['data'].stops;

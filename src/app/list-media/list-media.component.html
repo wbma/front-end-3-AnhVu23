@@ -9,6 +9,7 @@
   <li *ngFor="let stop of stopArray">
     <p>{{stop.patterns[0].route.shortName}}</p>
     <p>{{stop.patterns[0].route.longName}}</p>
+    <p *ngIf="stop.patterns[0].directionId === 0">Depart</p>
   </li>
 </ul>
 
