@@ -9,6 +9,7 @@ import { DigitransitItService } from '../services/digitransit-it.service';
 })
 export class ListMediaComponent implements OnInit {
 
+  stopStationName: string = '';
   printThis: string;
   mediaArray: any;
   stopArray: any;
@@ -27,8 +28,10 @@ export class ListMediaComponent implements OnInit {
       });
       console.log(this.mediaArray);
     }));
+  }
 
-    this.digiTransitService.getRoute('kamppi').subscribe(
+  getRoute() {
+    this.digiTransitService.getRoute(this.stopStationName).subscribe(
       (response) => {
         console.log(response['data'].stops);
         this.stopArray = response['data'].stops;

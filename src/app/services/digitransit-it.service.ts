@@ -3,7 +3,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Injectable()
 export class DigitransitItService {
-  baseUrl = ' https://api.digitransit.fi/routing/v1/routers/hsl/index/graphql';
+  baseUrl = 'https://api.digitransit.fi/routing/v1/routers/hsl/index/graphql';
   constructor(private http: HttpClient) { }
   getRoute(stationName: string) {
     const body = `{
